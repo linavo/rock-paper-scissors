@@ -82,4 +82,28 @@ function game() {
   console.log("Player: " + playerScore + " Computer: " + compScore);
 }
 // You have to re-add the getComputerChoice() in order for the computer to choose a different answer. PROBLEM WAS THE COMPUTER WASN'T RANDOMIZING ANSWER
-console.log(game());
+// console.log(game());
+
+function playRock() {
+  results.textContent = playRound("rock");
+}
+function playPaper() {
+  results.textContent = playRound("paper");
+}
+function playScissors() {
+  results.textContent = playRound("scissors");
+}
+
+// const play = document.querySelector("#play");
+// play.addEventListener("click", playGame);
+
+const rockButton = document.querySelector("#rock");
+rockButton.addEventListener("click", playRock);
+
+const paperButton = document.querySelector("#paper");
+paperButton.addEventListener("click", playPaper);
+
+const scissorsButton = document.querySelector("#scissors");
+scissorsButton.addEventListener("click", playScissors);
+
+const results = document.querySelector("#result");
