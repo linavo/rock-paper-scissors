@@ -1,3 +1,40 @@
 body {
-  background-color: beige;
+  background-color: rgb(237, 234, 226);
+}
+
+h1 {
+  text-shadow: 2px 2px 4px rgb(170, 170, 170);
+  width: 100%;
+  margin-top: 17vh;
+  display: flex;
+  justify-content: center;
+  font-size: 5em;
+}
+.buttons {
+  display: flex;
+  height: 20vh;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 0;
+}
+button {
+  font-family: "Times New Roman", Times, serif;
+  height: 70px;
+  width: 250px;
+  margin: 0 1vw;
+  font-size: 3em;
+  border: 3px solid;
+  border-radius: 20px;
+  background-color: rgb(237, 234, 226);
+  box-shadow: 2px 2px 4px rgb(170, 170, 170);
+}
+button:hover {
+  color: white;
+  background-color: black;
+}
+#result {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  text-shadow: 2px 2px 2px rgb(205, 205, 205);
 }
