@@ -11,18 +11,24 @@ function playRound(playerSelection, computerSelection = getComputerChoice()) {
     answer = "You have tied! Both players have played rock!";
   } else if (playerSelection == "rock" && computerSelection == choices[1]) {
     answer = "Oh no! Computer wins. Paper beats rock!";
+    compScore++;
   } else if (playerSelection == "rock" && computerSelection == choices[2]) {
     answer = "You have won! Rock beats scissors";
+    playerScore++;
   } else if (playerSelection == "paper" && computerSelection == choices[0]) {
     answer = "You have won! Paper beats rock!";
+    playerScore++;
   } else if (playerSelection == "paper" && computerSelection == choices[2]) {
     answer = "Oh no! Computer wins. Scissors beats paper!";
+    compScore++;
   } else if (playerSelection == "paper" && computerSelection == choices[1]) {
     answer = "You have tied! Both players have played paper!";
   } else if (playerSelection == "scissors" && computerSelection == choices[0]) {
     answer = "Oh no! Computer wins. Rock beats scissors!";
+    compScore++;
   } else if (playerSelection == "scissors" && computerSelection == choices[1]) {
     answer = "You have won! Scissors beats paper!";
+    playerScore++;
   } else if (playerSelection == "scissors" && computerSelection == choices[2]) {
     answer = "You have tied! Both players have played scissors!";
   } else {
@@ -86,12 +92,52 @@ function game() {
 
 function playRock() {
   results.textContent = playRound("rock");
+  score.textContent = "Player: " + playerScore + " Computer: " + compScore;
+  if (playerScore == 5) {
+    winner.textContent = "Congratulations you've won!";
+    playButton.setAttribute("style", "display:");
+  } else if (compScore == 5) {
+    winner.textContent = "Oh no! Computer has won!";
+    playButton.setAttribute("style", "display:");
+  } else if (playerScore && compScore == 5) {
+    winner.textContent = "It's a tie!";
+    playButton.setAttribute("style", "display:");
+  }
 }
 function playPaper() {
   results.textContent = playRound("paper");
+  score.textContent = "Player: " + playerScore + " Computer: " + compScore;
+  if (playerScore == 5) {
+    winner.textContent = "Congratulations you've won!";
+    playButton.setAttribute("style", "display:");
+  } else if (compScore == 5) {
+    winner.textContent = "Oh no! Computer has won!";
+    playButton.setAttribute("style", "display:");
+  } else if (playerScore && compScore == 5) {
+    winner.textContent = "It's a tie!";
+    playButton.setAttribute("style", "display:");
+  }
 }
 function playScissors() {
   results.textContent = playRound("scissors");
+  score.textContent = "Player: " + playerScore + " Computer: " + compScore;
+  if (playerScore == 5) {
+    winner.textContent = "Congratulations you've won!";
+    playButton.setAttribute("style", "display:");
+  } else if (compScore == 5) {
+    winner.textContent = "Oh no! Computer has won!";
+    playButton.setAttribute("style", "display:");
+  } else if (playerScore && compScore == 5) {
+    winner.textContent = "It's a tie!";
+    playButton.setAttribute("style", "display:");
+  }
+}
+function restart() {
+  results.textContent = "";
+  score.textContent = "";
+  winner.textContent = "";
+  playerScore = 0;
+  compScore = 0;
 }
 
 // const play = document.querySelector("#play");
@@ -107,3 +153,11 @@ const scissorsButton = document.querySelector("#scissors");
 scissorsButton.addEventListener("click", playScissors);
 
 const results = document.querySelector("#result");
+
+const score = document.querySelector("#score");
+
+const winner = document.querySelector("#winner");
+
+const playButton = document.querySelector("#playAgain");
+playButton.setAttribute("style", "display:none");
+playButton.addEventListener("click", restart);
