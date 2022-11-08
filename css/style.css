@@ -7,7 +7,7 @@ body {
 h1 {
   text-shadow: 2px 2px 4px rgb(170, 170, 170);
   width: 100%;
-  margin-top: 15vh;
+  margin-top: 10vh;
   display: flex;
   justify-content: center;
   font-size: 5em;
@@ -18,7 +18,7 @@ h2 {
   height: 60px;
   display: flex;
   justify-content: center;
-  font-size: 1.5em;
+  font-size: 1.25em;
   text-shadow: 1px 1px 2px rgb(170, 170, 170);
 }
 .buttons {
@@ -33,10 +33,10 @@ h2 {
 #scissors {
   transition: 0.2s;
   font-family: "Times New Roman", Times, serif;
-  height: 70px;
-  width: 250px;
+  height: 8vh;
+  width: 15vw;
   margin: 0 1vw;
-  font-size: 3em;
+  font-size: 2em;
   border: 3px solid;
   border-radius: 20px;
   background-color: rgb(237, 234, 226);
@@ -52,7 +52,7 @@ h2 {
 #result {
   display: flex;
   justify-content: center;
-  font-size: 2em;
+  font-size: 1.5em;
   text-shadow: 2px 2px 2px rgb(205, 205, 205);
 }
 #score {
@@ -61,7 +61,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2em;
+  font-size: 1.5em;
   text-shadow: 2px 2px 2px rgb(205, 205, 205);
 }
 #winner {
@@ -69,7 +69,7 @@ h2 {
   font-weight: 900;
   display: flex;
   justify-content: center;
-  font-size: 4em;
+  font-size: 3.5em;
   text-shadow: 4px 4px 2px rgb(177, 177, 177);
 }
 .container {
@@ -82,10 +82,10 @@ h2 {
 .again {
   transition: 0.2s;
   font-family: "Times New Roman", Times, serif;
-  height: 50px;
-  width: 250px;
+  height: 7vh;
+  width: 10vw;
   margin: 0 1vw;
-  font-size: 2em;
+  font-size: 1.5em;
   border: 3px solid;
   border-radius: 20px;
   background-color: rgb(237, 234, 226);
