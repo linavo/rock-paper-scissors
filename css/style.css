@@ -97,3 +97,24 @@ h2 {
   background-color: black;
   color: white;
 }
+@media screen and (max-width: 754px) {
+  body {
+    background-size: cover;
+    height: 100vh;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  #winner {
+    font-size: 2.5em;
+    text-align: center;
+  }
+  #rock,
+  #paper,
+  #scissors {
+    width: 50vw;
+  }
+  .again {
+    width: 50vw;
+  }
+}
